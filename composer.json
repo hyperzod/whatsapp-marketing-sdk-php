@@ -1,0 +1,43 @@
+{
+  "name": "hyperzod/whatsapp-marketing-sdk-php",
+  "description": "A PHP SDK to integrate Whatsapp Marketing with your application.",
+  "keywords": [
+    "hyperzod",
+    "whatsapp-marketing",
+    "whatsapp-marketing-sdk-php"
+  ],
+  "homepage": "https://github.com/hyperzod/whatsapp-marketing-sdk-php",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Firas Mumtaz",
+      "email": "firas@hyperzod.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hyperzod\\WhatsappMarketingSdkPhp\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Hyperzod\\WhatsappMarketingSdkPhp\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
