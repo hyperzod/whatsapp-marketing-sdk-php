@@ -2,7 +2,7 @@
 
 namespace Hyperzod\WhatsappMarketingSdkPhp\Service;
 
-use Hyperzod\WhatsappMarketingSdkPhp\Client\HyperzodClientInterface;
+use Hyperzod\WhatsappMarketingSdkPhp\Client\WhatsappMarketingClientInterface;
 
 /**
  * Abstract base class for all services.
@@ -10,14 +10,14 @@ use Hyperzod\WhatsappMarketingSdkPhp\Client\HyperzodClientInterface;
 abstract class AbstractService
 {
    /**
-    * @var HyperzodClientInterface
+    * @var WhatsappMarketingClientInterface
     */
    protected $client;
 
    /**
     * Initializes a new instance of the {@link AbstractService} class.
     *
-    * @param HyperzodClientInterface $client
+    * @param WhatsappMarketingClientInterface $client
     */
    public function __construct($client)
    {
@@ -27,7 +27,7 @@ abstract class AbstractService
    /**
     * Gets the client used by this service to send requests.
     *
-    * @return HyperzodClientInterface
+    * @return WhatsappMarketingClientInterface
     */
    public function getClient()
    {

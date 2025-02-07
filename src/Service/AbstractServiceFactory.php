@@ -2,11 +2,11 @@
 
 namespace Hyperzod\WhatsappMarketingSdkPhp\Service;
 
-use Hyperzod\WhatsappMarketingSdkPhp\Client\HyperzodClientInterface;
+use Hyperzod\WhatsappMarketingSdkPhp\Client\WhatsappMarketingClientInterface;
 
 /**
  * Abstract base class for all service factories used to expose service
- * instances through {@link \Hyperzod\WhatsappMarketingSdkPhp\Client\HyperzodClient}.
+ * instances through {@link \Hyperzod\WhatsappMarketingSdkPhp\Client\WhatsappMarketingClient}.
  *
  * Service factories serve two purposes:
  *
@@ -16,14 +16,14 @@ use Hyperzod\WhatsappMarketingSdkPhp\Client\HyperzodClientInterface;
  */
 abstract class AbstractServiceFactory
 {
-    /** @var HyperzodClientInterface */
+    /** @var WhatsappMarketingClientInterface */
     private $client;
 
     /** @var array<string, AbstractService> */
     private $services;
 
     /**
-     * @param HyperzodClientInterface $client
+     * @param WhatsappMarketingClientInterface $client
      */
     public function __construct($client)
     {
