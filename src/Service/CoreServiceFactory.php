@@ -14,6 +14,8 @@ class CoreServiceFactory extends AbstractServiceFactory
      */
     private static $classMap = [
         'message' => MessageService::class,
+        'waba' => WABAService::class,
+        'templates' => TemplatesService::class,
     ];
 
     protected function getServiceClass($name)
