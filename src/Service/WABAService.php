@@ -17,7 +17,7 @@ class WABAService extends AbstractService
     {
         return $this->request(
             HttpMethodEnum::GET,
-            '/api/whatsapp/account/onboarding-status',
+            '/whatsapp/account/onboarding-status',
             $params
         );
     }
