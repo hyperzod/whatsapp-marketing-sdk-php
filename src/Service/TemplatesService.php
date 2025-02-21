@@ -17,7 +17,7 @@ class TemplatesService extends AbstractService
     {
         return $this->request(
             HttpMethodEnum::GET,
-            '/whatsapp/account/templates',
+            '/whatsapp/templates',
             $params
         );
     }
