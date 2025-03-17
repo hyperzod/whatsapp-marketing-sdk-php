@@ -2,23 +2,24 @@
 
 namespace Hyperzod\WhatsappMarketingSdkPhp\Service;
 
-use Hyperzod\WhatsappMarketingSdkPhp\Service\AbstractService;
+use Hyperzod\WhatsappMarketingSdkPhp\Data\TemplatesData;
 use Hyperzod\WhatsappMarketingSdkPhp\Enums\HttpMethodEnum;
+use Hyperzod\WhatsappMarketingSdkPhp\Service\AbstractService;
 
 class TemplatesService extends AbstractService
 {
     /**
      * Get WhatsApp templates
      *
-     * @param array $params
+     * @param \Hyperzod\WhatsappMarketingSdkPhp\Data\TemplatesData $data
      * @throws \Hyperzod\WhatsappMarketingSdkPhp\Exception\ApiErrorException if the request fails
      */
-    public function getTemplates(array $params)
+    public function getTemplates(TemplatesData $data)
     {
         return $this->request(
             HttpMethodEnum::GET,
             '/whatsapp/templates',
-            $params
+            $data->toArray()
         );
     }
 } 

@@ -2,23 +2,24 @@
 
 namespace Hyperzod\WhatsappMarketingSdkPhp\Service;
 
-use Hyperzod\WhatsappMarketingSdkPhp\Service\AbstractService;
 use Hyperzod\WhatsappMarketingSdkPhp\Enums\HttpMethodEnum;
+use Hyperzod\WhatsappMarketingSdkPhp\Service\AbstractService;
+use Hyperzod\WhatsappMarketingSdkPhp\Data\OnboardingStatusData;
 
 class WABAService extends AbstractService
 {
     /**
      * Check WhatsApp Business Account onboarding status
      *
-     * @param array $params
+     * @param \Hyperzod\WhatsappMarketingSdkPhp\Data\OnboardingStatusData $data
      * @throws \Hyperzod\WhatsappMarketingSdkPhp\Exception\ApiErrorException if the request fails
      */
-    public function checkOnboardingStatus(array $params)
+    public function checkOnboardingStatus(OnboardingStatusData $data)
     {
         return $this->request(
             HttpMethodEnum::GET,
             '/whatsapp/onboarding-status',
-            $params
+            $data->toArray()
         );
     }
 } 
